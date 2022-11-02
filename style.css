@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Maze&family=Space+Mono&display=swap');
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@keyframes clignoter {
+  0%   { opacity:1; }
+  40%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+* {
+  cursor: url(../profile/images/cursorN.png), auto;
+}
+
+body {
+  background-image: url("../profile/images/back.png");
+  -webkit-animation:spin 1.3s linear ;
+  -moz-animation:spin 1.3s linear ;
+  animation:spin 1.3s linear ;
+  animation-duration: 2000ms;
+}
+
+h1 {
+  font-family: 'Rubik Maze', cursive;
+  font-size: 132px;
+}
+
+p {
+  font-family: 'Space Mono', monospace;
+}
+
+.img-circle {
+  border-radius: 50%;
+  height: 256px;
+  width: 256px;
+  cursor: url(../profile/images/cursor2.png), auto;
+}
+
+#btnControl {
+  opacity: 0;
+}
+
+#btnControl:checked + label > img {
+  -webkit-animation:spin 0.03s linear infinite;
+  -moz-animation:spin 0.03s linear infinite;
+  animation:spin 0.03s linear infinite;
+}
+
+.card {
+  background-color: #9EA3B0;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 25px;
+  width: 80%;
+  text-align: center;
+}
+
+.clignote {
+  animation-duration: .1s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: none;
+}
+
+.btn-link {
+  background-color: blueviolet !important;
+  color: white;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: url(../profile/images/cursor2.png), auto;
+}
+
+.rainbow-box {
+  border: 5px solid transparent;
+  border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image-slice: 1;
+  margin: 50px auto;
+}
+
+h1:hover, h2:hover, a:hover, p:hover, img:hover {
+  transform: scale(1.1) !important;
+  transform:rotate(180deg) !important;
+}
