@@ -14,8 +14,10 @@
   cursor: url(../profile/images/cursorN.png), auto;
 }
 
-input:hover {
-  cursor: url(../profile/images/cursor2.png), auto;
+img !important {
+  -webkit-animation:spin 0.03s linear infinite;
+  -moz-animation:spin 0.03s linear infinite;
+  animation:spin 0.03s linear infinite;
 }
 
 body {
@@ -44,12 +46,6 @@ p {
 
 #btnControl {
   opacity: 0;
-}
-
-img {
-  -webkit-animation:spin 0.03s linear infinite;
-  -moz-animation:spin 0.03s linear infinite;
-  animation:spin 0.03s linear infinite;
 }
 
 .card {
