@@ -46,7 +46,7 @@ p {
   opacity: 0;
 }
 
-#btnControl:checked + label > img {
+img {
   -webkit-animation:spin 0.03s linear infinite;
   -moz-animation:spin 0.03s linear infinite;
   animation:spin 0.03s linear infinite;
